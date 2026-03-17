@@ -196,10 +196,25 @@ const contactForm = document.getElementById('contactForm');
 const successModal = document.getElementById('successModal');
 const modalClose = document.getElementById('modalClose');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  successModal.classList.add('active');
-  contactForm.reset();
+  const data = Object.fromEntries(new FormData(contactForm));
+  try {
+    const res = await fetch('/api/enquiry', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const result = await res.json();
+    if (result.success) {
+      successModal.classList.add('active');
+      contactForm.reset();
+    } else {
+      alert(result.error || 'Something went wrong. Please try again.');
+    }
+  } catch {
+    alert('Network error. Please try again.');
+  }
 });
 
 modalClose.addEventListener('click', () => {
