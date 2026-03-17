@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EBike SG — Quality Used Electric Bikes in Singapore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">⚡ EBike<span>SG</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#catalog">Catalog</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Quality Used Electric Bikes<br>in <span class="highlight">Singapore</span></h1>
+      <p>Affordable, inspected &amp; road-ready e-bikes. Save big on your daily commute while going green.</p>
+      <div class="hero-buttons">
+        <a href="#catalog" class="btn btn-primary">Browse Catalog</a>
+        <a href="#contact" class="btn btn-outline">Enquire Now</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>200+</strong><span>Bikes Sold</span></div>
+        <div class="stat"><strong>50+</strong><span>In Stock</span></div>
+        <div class="stat"><strong>4.9★</strong><span>Rating</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog Section -->
+  <section class="catalog" id="catalog">
+    <div class="container">
+      <h2 class="section-title">Our Electric Bikes</h2>
+      <p class="section-subtitle">Every bike undergoes a thorough 30-point inspection before listing. Prices in SGD.</p>
+
+      <!-- Filters -->
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="foldable">Foldable</button>
+        <button class="filter-btn" data-filter="mountain">Mountain</button>
+        <button class="filter-btn" data-filter="city">City</button>
+        <button class="filter-btn" data-filter="cargo">Cargo</button>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="productGrid">
+        <!-- Products inserted by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us Section -->
+  <section class="why-us" id="why-us">
+    <div class="container">
+      <h2 class="section-title">Why Buy From Us</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3>30-Point Inspection</h3>
+          <p>Every bike is checked for battery health, brakes, tyres, motor condition and more before listing.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>3-Month Warranty</h3>
+          <p>All bikes come with a 3-month warranty on the motor and battery for your peace of mind.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚚</div>
+          <h3>Island-Wide Delivery</h3>
+          <p>We deliver across Singapore. Free delivery for orders above $800. Same-day available.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Best Prices</h3>
+          <p>Save 40–60% compared to buying new. Transparent pricing with no hidden fees.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔋</div>
+          <h3>Battery Certified</h3>
+          <p>Battery health report included with every purchase. Minimum 70% capacity guaranteed.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>LTA Compliant</h3>
+          <p>All bikes are EN15194 certified and registered — fully legal to ride in Singapore.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">Interested in a bike or have questions? Fill in the form and we'll get back to you within 24 hours.</p>
+      <div class="contact-wrapper">
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Tan Wei Ming" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. 9123 4567" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="e.g. weiming@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="bike">Bike You're Interested In</label>
+            <select id="bike" name="bike">
+              <option value="">— Select a bike (optional) —</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what you're looking for, any questions, or schedule a viewing..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Enquiry</button>
+        </form>
+        <div class="contact-info">
+          <h3>Visit Our Showroom</h3>
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+              <strong>EBike SG Showroom</strong><br>
+              Blk 1 Defu Lane 10, #01-200<br>
+              Singapore 539182
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">📞</span>
+            <div>
+              <strong>Call / WhatsApp</strong><br>
+              <a href="tel:+6591234567">+65 9123 4567</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">✉️</span>
+            <div>
+              <strong>Email</strong><br>
+              <a href="mailto:hello@ebikesg.com">hello@ebikesg.com</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🕐</span>
+            <div>
+              <strong>Opening Hours</strong><br>
+              Mon – Sat: 10am – 7pm<br>
+              Sun: 11am – 5pm
+            </div>
+          </div>
+          <a href="https://wa.me/6591234567" class="btn btn-whatsapp">💬 WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo">⚡ EBike<span>SG</span></a>
+        <p>Singapore's trusted source for quality used electric bikes since 2020.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#catalog">Catalog</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Return Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 EBike SG. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal">
+      <div class="modal-icon">✅</div>
+      <h3>Enquiry Sent!</h3>
+      <p>Thank you for your interest. We'll get back to you within 24 hours.</p>
+      <button class="btn btn-primary" id="modalClose">Got it</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
